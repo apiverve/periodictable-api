@@ -1,32 +1,35 @@
 openapi: 3.0.4
 info:
   title: Periodic Table
-  description: Periodic Table is a simple tool for getting information about chemical elements. It returns information such as the atomic number, symbol, and more based on the element provided.
+  description: >-
+    Periodic Table is a simple tool for getting information about chemical
+    elements. It returns information such as the atomic number, symbol, and more
+    based on the element provided.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/periodictable:
     get:
       summary: Get Element Information by Name
-      description: Periodic Table is a simple tool for getting information about chemical elements. It returns information such as the atomic number, symbol, and more based on the element provided.
+      description: Get information about a chemical element
       operationId: periodictable
       parameters:
-      - name: name
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The name of the chemical element to get information about
-        example: hydrogen
+        - name: name
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The name of the chemical element to get information about
+          example: hydrogen
       responses:
         '200':
           description: Successful Response
@@ -42,11 +45,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   name: Hydrogen
                   appearance: colorless gas
@@ -63,20 +66,26 @@ paths:
                   group: 1
                   phase: Gas
                   source: https://en.wikipedia.org/wiki/Hydrogen
-                  summary: Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass.
+                  summary: >-
+                    Hydrogen is a chemical element with chemical symbol H and
+                    atomic number 1. With an atomic weight of 1.00794 u,
+                    hydrogen is the lightest element on the periodic table. Its
+                    monatomic form (H) is the most abundant chemical substance
+                    in the Universe, constituting roughly 75% of all baryonic
+                    mass.
                   symbol: H
                   xpos: 1
                   ypos: 1
                   wxpos: 1
                   wypos: 1
                   shells:
-                  - 1
+                    - 1
                   electron_configuration: 1s1
                   electron_configuration_semantic: 1s1
                   electron_affinity: 72.769
                   electronegativity_pauling: 2.2
                   ionization_energies:
-                  - 1312
+                    - 1312
                   cpk-hex: ffffff
                   block: s
         '401':
@@ -84,7 +93,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -92,4 +101,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
