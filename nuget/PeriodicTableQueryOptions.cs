@@ -12,7 +12,6 @@ namespace APIVerve.API.PeriodicTable
     {
         /// <summary>
         /// The name of the chemical element to get information about
-        /// Example: hydrogen
         /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
