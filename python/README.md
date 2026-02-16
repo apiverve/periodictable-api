@@ -248,8 +248,9 @@ from apiverve_periodictable.apiClient import PeriodictableAPIClient
 
 api = PeriodictableAPIClient("[YOUR_API_KEY]")
 
+query = { "name": "hydrogen" }
+
 try:
-    query = { "name": "hydrogen" }
     result = api.execute(query)
     print(result)
 finally:
