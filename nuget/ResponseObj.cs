@@ -25,6 +25,9 @@ namespace APIVerve.API.PeriodicTable
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,37 +39,37 @@ namespace APIVerve.API.PeriodicTable
         public string Appearance { get; set; }
 
         [JsonProperty("atomic_mass")]
-        public double AtomicMass { get; set; }
+        public double? AtomicMass { get; set; }
 
         [JsonProperty("boil")]
-        public double Boil { get; set; }
+        public double? Boil { get; set; }
 
         [JsonProperty("category")]
         public string Category { get; set; }
 
         [JsonProperty("density")]
-        public double Density { get; set; }
+        public double? Density { get; set; }
 
         [JsonProperty("discovered_by")]
         public string DiscoveredBy { get; set; }
 
         [JsonProperty("melt")]
-        public double Melt { get; set; }
+        public double? Melt { get; set; }
 
         [JsonProperty("molar_heat")]
-        public double MolarHeat { get; set; }
+        public double? MolarHeat { get; set; }
 
         [JsonProperty("named_by")]
         public string NamedBy { get; set; }
 
         [JsonProperty("number")]
-        public long Number { get; set; }
+        public long? Number { get; set; }
 
         [JsonProperty("period")]
-        public long Period { get; set; }
+        public long? Period { get; set; }
 
         [JsonProperty("group")]
-        public long Group { get; set; }
+        public long? Group { get; set; }
 
         [JsonProperty("phase")]
         public string Phase { get; set; }
@@ -81,19 +84,19 @@ namespace APIVerve.API.PeriodicTable
         public string Symbol { get; set; }
 
         [JsonProperty("xpos")]
-        public long Xpos { get; set; }
+        public long? Xpos { get; set; }
 
         [JsonProperty("ypos")]
-        public long Ypos { get; set; }
+        public long? Ypos { get; set; }
 
         [JsonProperty("wxpos")]
-        public long Wxpos { get; set; }
+        public long? Wxpos { get; set; }
 
         [JsonProperty("wypos")]
-        public long Wypos { get; set; }
+        public long? Wypos { get; set; }
 
         [JsonProperty("shells")]
-        public long[] Shells { get; set; }
+        public long?[] Shells { get; set; }
 
         [JsonProperty("electron_configuration")]
         public string ElectronConfiguration { get; set; }
@@ -102,18 +105,30 @@ namespace APIVerve.API.PeriodicTable
         public string ElectronConfigurationSemantic { get; set; }
 
         [JsonProperty("electron_affinity")]
-        public double ElectronAffinity { get; set; }
+        public double? ElectronAffinity { get; set; }
 
         [JsonProperty("electronegativity_pauling")]
-        public double ElectronegativityPauling { get; set; }
+        public double? ElectronegativityPauling { get; set; }
 
         [JsonProperty("ionization_energies")]
-        public long[] IonizationEnergies { get; set; }
+        public long?[] IonizationEnergies { get; set; }
 
         [JsonProperty("cpk-hex")]
         public string CpkHex { get; set; }
 
         [JsonProperty("block")]
         public string Block { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
