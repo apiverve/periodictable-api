@@ -32,6 +32,15 @@ namespace APIVerve.API.PeriodicTable
 
     public partial class Data
     {
+        [JsonProperty("count")]
+        public long? Count { get; set; }
+
+        [JsonProperty("elements")]
+        public Element[] Elements { get; set; }
+    }
+
+    public partial class Element
+    {
         [JsonProperty("name")]
         public string Name { get; set; }
 
