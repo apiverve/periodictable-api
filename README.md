@@ -1,13 +1,13 @@
-# [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Periodic Table is a simple tool for getting information about chemical elements. It returns information such as the atomic number, symbol, and more based on the element provided.
+Periodic Table retrieves chemical element data by element name or symbol. Responses include atomic number, category, phase, block, standard group and period positions, and CPK hex colors, with paid plans adding atomic mass and thermal metrics.
 
 The Periodic Table API provides a simple, reliable way to integrate periodic table functionality into your applications. Built for developers who need production-ready periodic table capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/periodictable-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/periodictable](https://docs.apiverve.com/ref/periodictable)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,65 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Periodic Table API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "count": 1,
+    "elements": [
+      {
+        "name": "Hydrogen",
+        "appearance": "colorless gas",
+        "atomic_mass": 1.008,
+        "boil": 20.271,
+        "category": "diatomic nonmetal",
+        "density": 0.08988,
+        "discovered_by": "Henry Cavendish",
+        "melt": 13.99,
+        "molar_heat": 28.836,
+        "named_by": "Antoine Lavoisier",
+        "number": 1,
+        "period": 1,
+        "group": 1,
+        "phase": "Gas",
+        "source": "https://en.wikipedia.org/wiki/Hydrogen",
+        "summary": "Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass.",
+        "symbol": "H",
+        "xpos": 1,
+        "ypos": 1,
+        "wxpos": 1,
+        "wypos": 1,
+        "shells": [
+          1
+        ],
+        "electron_configuration": "1s1",
+        "electron_configuration_semantic": "1s1",
+        "electron_affinity": 72.769,
+        "electronegativity_pauling": 2.2,
+        "ionization_energies": [
+          1312
+        ],
+        "cpk-hex": "ffffff",
+        "block": "s"
+      }
+    ]
+  }
 }
 ```
 
@@ -203,7 +257,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
