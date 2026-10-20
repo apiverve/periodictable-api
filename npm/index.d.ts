@@ -25,6 +25,11 @@ declare module '@apiverve/periodictable' {
 
 
   interface PeriodicTableData {
+      count:    number | null;
+      elements: Element[];
+  }
+  
+  interface Element {
       name:                          null | string;
       appearance:                    null | string;
       atomicMass:                    number | null;

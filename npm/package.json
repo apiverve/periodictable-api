@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/periodictable",
-  "version": "1.2.0",
-  "description": "Periodic Table is a simple tool for getting information about chemical elements. It returns information such as the atomic number, symbol, and more based on the element provided.",
+  "version": "1.2.2",
+  "description": "Periodic Table retrieves chemical element data by element name or symbol. Responses include atomic number, category, phase, block, standard group and period positions, and CPK hex colors, with paid plans adding atomic mass and thermal metrics.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "periodic table", "periodic table api", "periodic table tool", "periodic table software", "periodic table service"
+    "periodic table api", "periodic table json", "periodic table lookup api", "chemical element lookup", "chemical symbol lookup"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/periodictable-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/periodictable?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/periodictable?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

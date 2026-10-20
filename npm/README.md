@@ -1,13 +1,10 @@
 # Periodic Table API
 
-Periodic Table is a simple tool for getting information about chemical elements. It returns information such as the atomic number, symbol, and more based on the element provided.
+Periodic Table retrieves chemical element data by element name or symbol. Responses include atomic number, category, phase, block, standard group and period positions, and CPK hex colors, with paid plans adding atomic mass and thermal metrics.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/periodictable.svg)](https://www.npmjs.com/package/@apiverve/periodictable)
 
-This is a Javascript Wrapper for the [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source=npm&utm_medium=readme)
+This is a JavaScript wrapper for the [Periodic Table API](https://apiverve.com/marketplace/periodictable?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -28,15 +25,15 @@ yarn add @apiverve/periodictable
 ## Configuration
 
 Before using the Periodic Table API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=referral&utm_content=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=referral&utm_content=readme)
 
-The Periodic Table API documentation is found here: [https://docs.apiverve.com/ref/periodictable](https://docs.apiverve.com/ref/periodictable?utm_source=npm&utm_medium=readme).
+The Periodic Table API documentation is found here: [https://docs.apiverve.com/ref/periodictable](https://docs.apiverve.com/ref/periodictable?utm_source=npm&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -122,39 +119,44 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "name": "Hydrogen",
-    "appearance": "colorless gas",
-    "atomic_mass": 1.008,
-    "boil": 20.271,
-    "category": "diatomic nonmetal",
-    "density": 0.08988,
-    "discovered_by": "Henry Cavendish",
-    "melt": 13.99,
-    "molar_heat": 28.836,
-    "named_by": "Antoine Lavoisier",
-    "number": 1,
-    "period": 1,
-    "group": 1,
-    "phase": "Gas",
-    "source": "https://en.wikipedia.org/wiki/Hydrogen",
-    "summary": "Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass.",
-    "symbol": "H",
-    "xpos": 1,
-    "ypos": 1,
-    "wxpos": 1,
-    "wypos": 1,
-    "shells": [
-      1
-    ],
-    "electron_configuration": "1s1",
-    "electron_configuration_semantic": "1s1",
-    "electron_affinity": 72.769,
-    "electronegativity_pauling": 2.2,
-    "ionization_energies": [
-      1312
-    ],
-    "cpk-hex": "ffffff",
-    "block": "s"
+    "count": 1,
+    "elements": [
+      {
+        "name": "Hydrogen",
+        "appearance": "colorless gas",
+        "atomic_mass": 1.008,
+        "boil": 20.271,
+        "category": "diatomic nonmetal",
+        "density": 0.08988,
+        "discovered_by": "Henry Cavendish",
+        "melt": 13.99,
+        "molar_heat": 28.836,
+        "named_by": "Antoine Lavoisier",
+        "number": 1,
+        "period": 1,
+        "group": 1,
+        "phase": "Gas",
+        "source": "https://en.wikipedia.org/wiki/Hydrogen",
+        "summary": "Hydrogen is a chemical element with chemical symbol H and atomic number 1. With an atomic weight of 1.00794 u, hydrogen is the lightest element on the periodic table. Its monatomic form (H) is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass.",
+        "symbol": "H",
+        "xpos": 1,
+        "ypos": 1,
+        "wxpos": 1,
+        "wypos": 1,
+        "shells": [
+          1
+        ],
+        "electron_configuration": "1s1",
+        "electron_configuration_semantic": "1s1",
+        "electron_affinity": 72.769,
+        "electronegativity_pauling": 2.2,
+        "ionization_energies": [
+          1312
+        ],
+        "cpk-hex": "ffffff",
+        "block": "s"
+      }
+    ]
   }
 }
 ```
@@ -163,7 +165,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -175,12 +177,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=referral&utm_content=readme) and [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=referral&utm_content=readme).
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
